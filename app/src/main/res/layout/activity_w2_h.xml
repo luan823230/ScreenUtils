@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/sp_24"
+        android:textColor="@android:color/white"
+        android:text="@string/test"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/y126"/>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="@dimen/x659"
+        android:layout_height="@dimen/y357"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv"
+        android:layout_marginTop="@dimen/y153"
+        android:background="@drawable/bg1"/>
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_17"
+        android:text="点击按钮，人脸开门"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iv"
+        android:id="@+id/tv1"
+        android:layout_marginTop="@dimen/y131"/>
+
+    <Button
+        android:layout_width="@dimen/x218"
+        android:layout_height="@dimen/x218"
+        android:background="@drawable/butten"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv1"
+        android:layout_marginTop="@dimen/y39"/>
+
+</RelativeLayout>

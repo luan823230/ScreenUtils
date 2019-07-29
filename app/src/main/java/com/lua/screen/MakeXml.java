@@ -9,8 +9,8 @@ public class MakeXml {
 
     private final static String rootPath = "C:\\Users\\jk\\Desktop\\layoutroot\\values-{0}x{1}\\";
 
-    private final static float dw = 320f;
-    private final static float dh = 480f;
+    private final static float dw = 720f;
+    private final static float dh = 1280f;
 
     private final static String WTemplate = "<dimen name=\"x{0}\">{1}px</dimen>\n";
     private final static String HTemplate = "<dimen name=\"y{0}\">{1}px</dimen>\n";
@@ -37,22 +37,22 @@ public class MakeXml {
         sb.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
         sb.append("<resources>");
         float cellw = w / dw;
-        for (int i = 1; i < 320; i++) {
+        for (int i = 1; i < 720; i++) {
             sb.append(WTemplate.replace("{0}", i + "").replace("{1}",
                     change(cellw * i) + ""));
         }
-        sb.append(WTemplate.replace("{0}", "320").replace("{1}", w + ""));
+        sb.append(WTemplate.replace("{0}", "720").replace("{1}", w + ""));
         sb.append("</resources>");
 
         StringBuffer sb2 = new StringBuffer();
         sb2.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
         sb2.append("<resources>");
         float cellh = h / dh;
-        for (int i = 1; i < 480; i++) {
+        for (int i = 1; i < 1280; i++) {
             sb2.append(HTemplate.replace("{0}", i + "").replace("{1}",
                     change(cellh * i) + ""));
         }
-        sb2.append(HTemplate.replace("{0}", "480").replace("{1}", h + ""));
+        sb2.append(HTemplate.replace("{0}", "1280").replace("{1}", h + ""));
         sb2.append("</resources>");
 
         String path = rootPath.replace("{0}", h + "").replace("{1}", w + "");
